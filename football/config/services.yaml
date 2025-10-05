@@ -1,0 +1,38 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    notification.email_to: '%env(NOTIFICATION_EMAIL_TO)%'
+    #notification.sms_to: '%env(NOTIFICATION_SMS_TO)%'
+    #notification.whatsapp_to: '%env(NOTIFICATION_WHATSAPP_TO)%'
+    
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+    App\Notification\NotificationEmail:
+        arguments:
+            $to: '%notification.email_to%'
+    #App\Notification\NotificationSMS:
+    #   arguments:
+    #        $to: '%notification.sms_to%'
+    #App\Notification\NotificationWhatsapp:
+    #    arguments:
+    #        $to: '%notification.whatsapp_to%'
+    App\Service\NotificationService:
+        arguments:
+            $methods:
+                - '@App\Notification\NotificationEmail'
+                #- '@App\Notification\NotificationSMS'
+                #- '@App\Notification\NotificationWhatsapp'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones

@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "846112c7-1c8a-4bb1-bd0a-88e323331607",
+		"name": "Football",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46400583",
+		"_collection_link": "https://cloudy-moon-3745770.postman.co/workspace/David-Exp%25C3%25B3sito-S%25C3%25A1nchez's-Worksp~517cef5f-0272-4453-889f-3ade39f9593c/collection/46400583-846112c7-1c8a-4bb1-bd0a-88e323331607?action=share&source=collection_link&creator=46400583"
+	},
+	"item": [
+		{
+			"name": "Footballer",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\",\n    \"surname\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}footballer/create",
+							"host": [
+								"{{url}}footballer"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Release",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"footballer\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}footballer/release",
+							"host": [
+								"{{url}}footballer"
+							],
+							"path": [
+								"release"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Footballers Club",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}footballer/club/5",
+							"host": [
+								"{{url}}footballer"
+							],
+							"path": [
+								"club",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Footballers Club Filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}footballer/club/3?filter=name&value=Jan",
+							"host": [
+								"{{url}}footballer"
+							],
+							"path": [
+								"club",
+								"3"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "name"
+								},
+								{
+									"key": "value",
+									"value": "Jan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Footballers Club Page",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}footballer/club/2?limit=2&page=1",
+							"host": [
+								"{{url}}footballer"
+							],
+							"path": [
+								"club",
+								"2"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Footballers Club Free",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}footballer/free",
+							"host": [
+								"{{url}}footballer"
+							],
+							"path": [
+								"free"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coach",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pep\",\n    \"surname\": \"Guardiola\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}coach/create",
+							"host": [
+								"{{url}}coach"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Release",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"coach\": \"21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}coach/release",
+							"host": [
+								"{{url}}coach"
+							],
+							"path": [
+								"release"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Club",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lepe\",\n    \"budget\": \"400\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}club/create",
+							"host": [
+								"{{url}}club"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Footballer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"club\": \"5\",\n    \"footballer\": \"7\",\n    \"salary\": \"399\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}club/add/footballer",
+							"host": [
+								"{{url}}club"
+							],
+							"path": [
+								"add",
+								"footballer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Coach",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"club\": \"5\",\n    \"coach\": \"21\",\n    \"salary\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}club/add/coach",
+							"host": [
+								"{{url}}club"
+							],
+							"path": [
+								"add",
+								"coach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Budget",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"club\": \"2\",\n    \"budget\": \"70\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}club/modify/budget",
+							"host": [
+								"{{url}}club"
+							],
+							"path": [
+								"modify",
+								"budget"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/",
+			"type": "string"
+		}
+	]
+}
